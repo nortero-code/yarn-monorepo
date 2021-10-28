@@ -1,0 +1,21 @@
+{
+  "name": "yarn-monorepo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "yarn tsc --build -v",
+    "rebuild": "yarn tsc --build --force -v",
+    "clean": "rm -rfv **/build"
+  },
+  "private": true,
+  "license": "MIT",
+  "packageManager": "yarn@3.1.0",
+  "engines": {
+    "node": "16"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "typescript": "next"
+  }
+}

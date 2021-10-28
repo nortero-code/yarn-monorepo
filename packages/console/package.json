@@ -1,0 +1,23 @@
+{
+    "name": "console",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "main": "build/main",
+    "exports": "./main",
+    "types": "build/main",
+    "scripts": {
+        "build": "tsc --build --traceResolution",
+        "start": "yarn build && node build/main.js"
+    },
+    "engines": {
+        "node": "16"
+    },
+    "dependencies": {
+        "shared": "workspace:^"
+    },
+    "packageManager": "yarn@3.1.0",
+    "devDependencies": {
+        "typescript": "next"
+    }
+}

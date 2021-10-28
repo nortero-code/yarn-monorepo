@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "esnext",
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true,
+        "moduleResolution": "nodeNext",
+        "skipLibCheck": true,
+        "composite": true, //Needed for yarn workspaces
+    },
+    "include": [""],
+    "exclude": [
+        "**/build",
+        "node_modules",
+        "src/**/*.d.ts"
+    ],
+    "references": [
+        { "path": "packages/shared" },
+        { "path": "packages/console" },
+        //{ "path": "packages/web" },
+    ]
+}

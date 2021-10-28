@@ -1,0 +1,28 @@
+{
+  "name": "shared",
+  "packageManager": "yarn@3.1.0",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'build shared' && tsc --build",
+    "clean": "rm -r build/*"
+  },
+  "main": "./build/index",
+  "exports": {
+    ".": {
+      "import": "./build/index.js",
+      "types": "./build/index.d.ts"
+    },
+    "./*": {
+      "import": "./build/*.js",
+      "types": "./build/*.d.ts"
+    }
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "typescript": "next"
+  }
+}
